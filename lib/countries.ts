@@ -1,0 +1,23 @@
+export const contries=[
+    {code :'us',name:'United States'},
+    {code :'gb',name:'United Kingdom'},
+    {code :'ca',name:'Canada'},
+    {code :'au',name:'Australia'},
+    {code :'in',name:'India'},
+    {code :'de',name:'Germany'},
+    {code :'fr',name:'France'},
+    {code :'it',name:'Italy'},
+    {code :'jp',name:'Japan'},
+    {code :'cn',name:'China'},
+    {code :'br',name:'Brazil'},
+    {code :'za',name:'South Africa'},
+    {code :'ru',name:'Russia'},
+    {code :'mx',name:'Mexico'},
+    {code :'es',name:'Spain'},
+    {code :'kr',name:'South Korea'},
+    {code :'ng',name:'Nigeria'},
+    {code :'ae',name:'United Arab Emirates'},
+    {code :'sa',name:'Saudi Arabia'},
+    {code :'ar',name:'Argentina'},
+    
+]
