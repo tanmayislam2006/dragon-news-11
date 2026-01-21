@@ -1,4 +1,4 @@
-export const contries=[
+export const countries=[
     {code :'us',name:'United States'},
     {code :'gb',name:'United Kingdom'},
     {code :'ca',name:'Canada'},

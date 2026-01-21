@@ -13,19 +13,32 @@ export async function GET(req: Request) {
 
     const res = await axios.get(`${API_URL}?apiKey=${API_KEY}`);
     const data = res.data.sources || [];
-    await prisma.news.upsert({
-      where: { id: data.id },
-      create: {
-        id: data.id,
-        name: data.name,
-        description: data.description,
-        url: data.url,
-        category: data.category,
-        language: data.language,
-        country: data.country,
-      },
-      update: {},
-    });
+
+    for (const item of data) {
+      if (item.id) {
+        await prisma.news.upsert({
+          where: { id: item.id },
+          create: {
+            id: item.id,
+            name: item.name,
+            description: item.description,
+            url: item.url,
+            category: item.category,
+            language: item.language,
+            country: item.country,
+          },
+          update: {
+            name: item.name,
+            description: item.description,
+            url: item.url,
+            category: item.category,
+            language: item.language,
+            country: item.country,
+          },
+        });
+      }
+    }
+
     const filter = await prisma.news.findMany({
       where: {
         AND: [
