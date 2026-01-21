@@ -36,7 +36,7 @@ export default function Home() {
       <SelectCountry value={country} onChange={setCountry}></SelectCountry>
       <div className="grid grid-cols-4 gap-4 mt-4 ">
         {news.map((n) => {
-          return <NewsCard key={n.id} data={n}></NewsCard>;
+          return <NewsCard key={n.id as string} data={n}></NewsCard>;
         })}
       </div>
     </div>
